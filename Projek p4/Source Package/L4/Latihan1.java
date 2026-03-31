@@ -38,6 +38,6 @@ public class Latihan1 {
         System.out.println("Nilai UAS         : " + nilaiUAS);
         System.out.print("--------------------------------------");
         System.out.println(" Total Nilai Akhir: " + nilaiakhir);
-
+        inputScanner.close();
     }
 }
