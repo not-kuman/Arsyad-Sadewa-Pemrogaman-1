@@ -20,11 +20,12 @@ public class Tugas1 {
         ProgamStudi = inputScanner.next();
 
         System.out.println("========================================");
-        System.out.println(" Detail Data Diri");
-        System.out.printf(" => Nama: %s\n", NamaLengkap);
-        System.out.printf(" => Umur: %d\n", Umur);
-        System.out.printf(" => Universitas: %s\n", Universitas);
-        System.out.printf(" => Progam Studi: %s\n", ProgamStudi);
+        System.out.println("          Detail Data Diri"              );
+        System.out.println("========================================");
+        System.out.println(" => Nama         : " + NamaLengkap);
+        System.out.println(" => Umur         : " + Umur);
+        System.out.println(" => Universitas  : " +Universitas);
+        System.out.println(" => Progam Studi : " +ProgamStudi);
         System.out.println("=========================================");
         inputScanner.close();
     }
