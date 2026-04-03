@@ -55,6 +55,23 @@ public class Tugas1 {
         System.out.println(" Hasil Pesentase transport 3: "+ presentasiTransport3 + "%");
         System.out.println(" Hasil Pesentase belanja 3: "+ presentaseBelanja3 + "%");
 
+        System.out.println(" Hari 4");
+        double makanan4, transport4, belanja4;
+        System.out.println(" Total Harga Makanan:");
+        makanan4 = input.nextDouble();
+        System.out.println(" Total Harga Transport:");
+        transport4 = input.nextDouble();
+        System.out.println(" Total Harga Belanja:");
+        belanja4 = input.nextDouble();
+        double total4 = makanan4 + transport4 + belanja4;
+        double presentaseMakanan4 = (makanan4 / total4) * 100;
+        double presentasiTransport4 = ( transport4 / total4) * 100;
+        double presentaseBelanja4 = (belanja4 / total4) * 100;
+
+        System.out.println(" Hasil Pesentase makanan 4: "+ presentaseMakanan4 + "%");
+        System.out.println(" Hasil Pesentase transport 4: "+ presentasiTransport4 + "%");
+        System.out.println(" Hasil Pesentase belanja 4: "+ presentaseBelanja4 + "%");
+
         input.close();
     }
 }
