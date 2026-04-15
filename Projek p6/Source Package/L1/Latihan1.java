@@ -1,36 +1,59 @@
-import java.util.Scanner;
-
 public class Latihan1 {
+    
+    private String name;
+    private String address;
+    private int age;
+    private double mathgrade;
+    private double englishgrade;
+    private double sciencegrade;
+    private static int studentCount;
+
+    public String getName(){ return name; }
+    public double getMathGrade(){ return mathgrade; }
+    public double getEnglishGrade(){ return englishgrade; }
+    public double getScienceGrade(){ return sciencegrade; }
+
+    public double getAverage(){
+        return (mathgrade + englishgrade + sciencegrade) / 3;
+    }
+    public static int getStudentCount(){
+        return studentCount;
+    }
+
+    public void setName(String temp){ name = temp; }
+    public void setAddress(String temp){ address = temp; }
+
+    public void setAge(int age){ this.age = age; }
+
+    public void setMathGrade(double mathgrade){ this.mathgrade = mathgrade; }
+    public void setEnglishGrade(double englishgrade){ this.englishgrade = englishgrade; }    
+    public void setScienceGrade(double sciencegrade){ this.sciencegrade = sciencegrade; }
+
+    public void print(String temp){
+        System.out.println("Name:"+ name);
+        System.out.println("Address:"+ address);
+        System.out.println("Age:"+ age);
+    }
+    public void print(double eGrade, double mGrade, double sGrade){
+        System.out.println("Name:"+ name);
+        System.out.println("Math Grade:"+ mGrade);
+        System.out.println("English Grade:"+ eGrade);
+        System.out.println("Science Grade:"+ sGrade);
+    }
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Masukkan harga makanan: ");
-        int hargaMakanan = input.nextInt();
-        System.out.print(" Apakah Anda memiliki kartu member? (y/t): ");
-        char member = input.next().toLowerCase().charAt(0);
+        Latihan1 annaRecord = new Latihan1();
 
-        double hargafinal = hargaMakanan;
-        if (member == 'y') {
-            if (hargaMakanan >= 50000) {
-                System.out.println( " Selamat! Anda adalah member dan telah belanja lebih dari 50.000, diskon 10% telah diterapkan.");
-                hargafinal = hargaMakanan - (hargaMakanan * 0.1);
-            }else {
-                System.out.println(" Maaf, Anda adalah member tetapi belum mencapai batas minimum belanja untuk mendapatkan diskon.");
-            }
-        }
-        System.out.println(" Total harga yang harus dibayar setelah diskon: " + hargafinal);
-        System.out.print(" Masukkan jumlah uang yang dibayarkan: ");
-        double uangBayar = input.nextDouble();
+        annaRecord.setName("Anna");
+        annaRecord.setAddress("Philippines");
+        annaRecord.setAge(15);
+        annaRecord.setMathGrade(80);
+        annaRecord.setEnglishGrade(95.5);
+        annaRecord.setScienceGrade(100);
 
-        System.out.println("-----------------------------");
-        
-        if (uangBayar < hargafinal) {
-            System.out.println("Uang yang dibayarkan kurang. Silakan bayar dengan jumlah yang cukup.");
-        } else if (uangBayar == hargafinal) {
-            System.out.println("Pembayaran berhasil. Terima kasih!");
-        } else {
-            double kembalian = uangBayar - hargafinal;
-            System.out.println("Pembayaran berhasil. Kembalian Anda: " + kembalian);
-        }
-        input.close();
+        System.out.println("--- Cetak Versi 1 ---");
+        annaRecord.print(annaRecord.getName());
+
+        System.out.println("--- Cetak Versi 2 ---");
+        annaRecord.print(annaRecord.getEnglishGrade(), annaRecord.getMathGrade(), annaRecord.getScienceGrade());    
     }
 }
